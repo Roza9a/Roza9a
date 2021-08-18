@@ -1,4 +1,6 @@
 const Discord = require(`discord.js`);
+const fs = require("fs");
+const { Collection, Client } = require("discord.js");
 const { Client, Collection, MessageEmbed,MessageAttachment } = require(`discord.js`);
 const { readdirSync } = require(`fs`);
 const { join } = require(`path`);
