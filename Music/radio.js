@@ -14,8 +14,8 @@
   const db = require('quick.db');
   //all radio stations
   const Radiostations = [
-    "http://onlineradiobox.com/iq/x/?played=1&cs=iq.x",
-    "http://streema.com/radios/Radio_Quran_Kurdish",
+    "Standard-Radio https://streams.ilovemusic.de/iloveradio14.mp3",
+    "Base-Radio.de https://baseradiode.stream.laut.fm/baseradiode",
     "Chill-Radio https://streams.ilovemusic.de/iloveradio17.mp3",
     "Dance-Radio https://streams.ilovemusic.de/iloveradio2.mp3",
     "Deutsch-Rap-Radio https://streams.ilovemusic.de/iloveradio6.mp3",
