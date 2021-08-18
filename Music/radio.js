@@ -2,7 +2,7 @@
   //////CONFIG LOAD///////////
   ////////////////////////////
   const { canModifyQueue } = require("../util/MilratoUtil");
-  const { play } = require("../music/play");
+  const { play } = require("../Music/play");
   const { attentionembed } = require("../util/attentionembed"); 
   const { MessageEmbed } = require("discord.js");
   const Discord = require("discord.js");
