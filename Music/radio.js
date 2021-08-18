@@ -15,7 +15,7 @@
   //all radio stations
   const Radiostations = [
     "Standard-Radio https://youtu.be/BNS_ENQZNak",
-    "Base-Radio.de https://baseradiode.stream.laut.fm/baseradiode",
+    "Base-Radio.de https://youtu.be/YkqYpvw8zZQ",
     "Chill-Radio https://streams.ilovemusic.de/iloveradio17.mp3",
     "Dance-Radio https://streams.ilovemusic.de/iloveradio2.mp3",
     "Deutsch-Rap-Radio https://streams.ilovemusic.de/iloveradio6.mp3",
