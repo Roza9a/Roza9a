@@ -2,7 +2,7 @@
   //////CONFIG LOAD///////////
   ////////////////////////////
   const { canModifyQueue } = require("../util/MilratoUtil");
-  const { play } = require("../Music/play");
+  const { play } = require("../include/play");
   const { attentionembed } = require("../util/attentionembed"); 
   const { MessageEmbed } = require("discord.js");
   const Discord = require("discord.js");
@@ -14,8 +14,8 @@
   const db = require('quick.db');
   //all radio stations
   const Radiostations = [
-    "Standard-Radio https://youtu.be/BNS_ENQZNak",
-    "Base-Radio.de https://youtu.be/YkqYpvw8zZQ",
+    "",
+    "",
     "Chill-Radio https://streams.ilovemusic.de/iloveradio17.mp3",
     "Dance-Radio https://streams.ilovemusic.de/iloveradio2.mp3",
     "Deutsch-Rap-Radio https://streams.ilovemusic.de/iloveradio6.mp3",
