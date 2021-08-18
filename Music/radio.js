@@ -14,8 +14,8 @@
   const db = require('quick.db');
   //all radio stations
   const Radiostations = [
-    "",
-    "",
+    "http://onlineradiobox.com/iq/x/?played=1&cs=iq.x",
+    "https://www.youtube.com/watch?v=WjqYTpE6Qdg&list=RDWjqYTpE6Qdg&start_radio=1",
     "Chill-Radio https://streams.ilovemusic.de/iloveradio17.mp3",
     "Dance-Radio https://streams.ilovemusic.de/iloveradio2.mp3",
     "Deutsch-Rap-Radio https://streams.ilovemusic.de/iloveradio6.mp3",
