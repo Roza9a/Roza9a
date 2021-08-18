@@ -14,7 +14,7 @@
   const db = require('quick.db');
   //all radio stations
   const Radiostations = [
-    "Standard-Radio https://streams.ilovemusic.de/iloveradio14.mp3",
+    "Standard-Radio https://youtu.be/BNS_ENQZNak",
     "Base-Radio.de https://baseradiode.stream.laut.fm/baseradiode",
     "Chill-Radio https://streams.ilovemusic.de/iloveradio17.mp3",
     "Dance-Radio https://streams.ilovemusic.de/iloveradio2.mp3",
