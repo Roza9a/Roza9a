@@ -21,95 +21,34 @@ module.exports = {
     //define the commands as a command
     let commands = message.client.commands.array();
     //define the help embed
-    let helpEmbed = new MessageEmbed()
+    let resultsEmbed = new Discord.MessageEmbed()
       .setTitle(`List of all commands`)
-      .setDescription("__**```LIST OF ALL CHILL MUSIC COMMANDS```**__")
        .setImage('https://cdn.discordapp.com/attachments/877688129463664690/877891416209121280/92d9607b947fbd8c44a0df1f3c582d71.gif')
-       .setFooter(message.author.username, message.author.displayAvatarURL)
-       .setDescription(`**[  SUPPORT  ](https://discord.gg/VCGtFWeuQD)**   -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=874259088878485555&permissions=8&scope=bot)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setColor('RANDOM');
-    //define argstrue to negative
-    let ifargstruedothis = -1;
-
-      switch(args[0]){
-          case "filter":
-           ifargstruedothis=0;
-          break;
-          case "loop":
-            ifargstruedothis=1;
-          break;
-          case "lyrics":
-            ifargstruedothis=2
-          break;
-          case "nowplaying":
-            ifargstruedothis=3
-          break;
-          case "pause":
-            ifargstruedothis=4
-          break;
-          case "play":
-            ifargstruedothis=5
-          break;
-          case "playlist":
-            ifargstruedothis=6
-          break;
-          case "queue":
-            ifargstruedothis=7
-          break;
-          case "radio":
-            ifargstruedothis=8
-          break;
-          case "remove":
-            ifargstruedothis=9
-          break; 
-          case "resume":
-            ifargstruedothis=10
-          break;
-          case "search":
-            ifargstruedothis=11
-          break;
-          case "shuffle":
-            ifargstruedothis=12
-          break;
-          case "skip":
-            ifargstruedothis=13
-          break;
-          case "skipto":
-            ifargstruedothis=14
-          break;
-          case "stop":
-            ifargstruedothis=15
-          break;
-          case "volume":
-            ifargstruedothis=16
-          break;
-          case "botlist":
-            ifargstruedothis=17
-          break;
-          case "help":
-            ifargstruedothis=18
-          break;
-          case "invite":
-            ifargstruedothis=19
-          break;
-          case "ping":
-            ifargstruedothis=20
-          break;
-          case "prefix":
-            ifargstruedothis=21
-          break;
-          case "uptime":
-            ifargstruedothis=22
-          break;
-          default:
-            commands.forEach((cmd) => {
+      .addfailed(`
+  
+  **Public Command**
+  \`${prefix}cmd1\`
+  \`${prefix}cmd2\`
+  \`${prefix}cmd3\`
+  \`${prefix}cmd4\`
+  \`${prefix}cmd5\`
+  **Admin Command**
+  \`${prefix}cmd1\`
+  \`${prefix}cmd2\`
+  \`${prefix}cmd3\`
+  \`${prefix}cmd4\`
+  \`${prefix}cmd5\``)
+  .setFooter(`🛠 | Thx for using my cmd\nmy prefix = <${prefix}>`) 
+   commands.forEach((cmd) => {
               helpEmbed.addField(
                 `**${prefix}${cmd.name}**`,
                 `${cmd.description}`,
                 true
               );
-            });
+            });  
+    
           if(!message.guild) {
             if(!args[0]) {message.react(approveemoji);return message.channel.send(helpEmbed);}
             return
@@ -146,5 +85,4 @@ message.channel.send(helpEmbed)
           );
        }
 
-}
 }
