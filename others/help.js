@@ -19,8 +19,9 @@ module.exports = {
       .setFooter( client.user.username +`Type: ${+}help <Command>  for more information!`)
       .setColor("#c219d8");
 
-      let ifargstruedothis = -1;
-      
+      //define argstrue to negative
+    let ifargstruedothis = -1;
+.addfaeild(`
       switch(args[0]){
           case "filter":
            ifargstruedothis=0;
@@ -51,7 +52,7 @@ module.exports = {
           break;
           case "remove":
             ifargstruedothis=9
-          break;
+          break; 
           case "resume":
             ifargstruedothis=10
           break;
@@ -73,13 +74,28 @@ module.exports = {
           case "volume":
             ifargstruedothis=16
           break;
-          case "help":
+          case "botlist":
             ifargstruedothis=17
           break;
-          default:        
+          case "help":
+            ifargstruedothis=18
+          break;
+          case "invite":
+            ifargstruedothis=19
+          break;
+          case "ping":
+            ifargstruedothis=20
+          break;
+          case "prefix":
+            ifargstruedothis=21
+          break;
+          case "uptime":
+            ifargstruedothis=22
+          break;
+          default:
             commands.forEach((cmd) => {
               helpEmbed.addField(
-                `**${message.client.prefix}${cmd.name}**`,
+                `**${prefix}${cmd.name}**`,
                 `${cmd.description}`,
                 true
               );
