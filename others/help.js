@@ -1,8 +1,35 @@
 const { Client, Collection, MessageEmbed } = require(`discord.js`);
-const { 
-  PREFIX, 
-require(`../config.json`);  = {
-//define argstrue to negative
+const {
+  PREFIX,
+  approveemoji,
+  denyemoji
+} = require(`../config.json`);
+const db = require('quick.db');
+
+module.exports = {
+  name: `~musiccommands`,
+  description: "(h)Gives you a list of all help Commands",
+  aliases: ["h","commands"],
+  cooldown: 3,
+  edesc: "Type help to get a short preview of all Commands, Type help <COMMANDNAME> to get extended information about this one command!",
+  async execute(message,args,client) {
+
+    let prefix = await db.get(`prefix_${message.guild.id}`)
+    if(prefix === null) prefix = PREFIX;
+    //react with approve emoji
+    message.react("769665713124016128");
+    //define the commands as a command
+    let commands = message.client.commands.array();
+    //define the help embed
+    let helpEmbed = new MessageEmbed()
+      .setTitle(`List of all commands`)
+      .setDescription("__**```LIST OF ALL CHILL MUSIC COMMANDS```**__")
+       .setImage('https://cdn.discordapp.com/attachments/877688129463664690/877891416209121280/92d9607b947fbd8c44a0df1f3c582d71.gif')
+       .setFooter(message.author.username, message.author.displayAvatarURL)
+       .setDescription(`**[  SUPPORT  ](https://discord.gg/VCGtFWeuQD)**   -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=874259088878485555&permissions=8&scope=bot)`)
+      .setThumbnail(message.author.avatarURL({dynamic: "true"}))
+      .setColor('RANDOM');
+    //define argstrue to negative
     let ifargstruedothis = -1;
 
       switch(args[0]){
@@ -83,21 +110,16 @@ require(`../config.json`);  = {
                 true
               );
             });
-
-            if(!args[0]) {message.react("<:Yeh:827947991922376776>");return message.author.send(helpEmbed);}
+          if(!message.guild) {
+            if(!args[0]) {message.react(approveemoji);return message.channel.send(helpEmbed);}
             return
             }
-            message.react("<:Yeh:827947991922376776>");
-            message.author.send(new MessageEmbed().setColor("#c219d8")
-            .setDescription(`** <:Ba:827947991632969749> Sent from <#${message.channel.id}>**`))
-            message.author.send(helpEmbed)
-            message.channel.send( new MessageEmbed().setColor("#c219d8")
-            .setDescription(`** <:Ba:827947991632969749> ${message.author} Check your \`direct messages\` for a list of Commands!**`)
-            );
-           
+            message.react(approveemoji);
+message.channel.send(helpEmbed)
+
         break;
        }
-     
+
        if(ifargstruedothis>=0){
          let aliases = commands[ifargstruedothis].aliases;
          if(aliases === undefined || !aliases) aliases="No Aliases!";
@@ -106,7 +128,7 @@ require(`../config.json`);  = {
 
 
         helpEmbed.addField(
-          `**${message.client.prefix}${commands[ifargstruedothis].name}**`,
+          `**${prefix}${commands[ifargstruedothis].name}**`,
           `\`\`\`fix\n${commands[ifargstruedothis].edesc}\n\`\`\`\n\`${commands[ifargstruedothis].description}\``
         );
         helpEmbed.addField(
@@ -120,9 +142,8 @@ require(`../config.json`);  = {
         if(!message.guild) return message.author.send(helpEmbed);
           message.author.send(helpEmbed)
           message.channel.send( new MessageEmbed().setColor("#c219d8")
-          .setDescription(`** <:Ba:827947991632969749> ${message.author} Check your \`direct messages\` for a list of Commands!**`)
+        .setDescription(`**👍 ${message.author} Check your \`direct messages\` for a list of Commands!**`)
           );
        }
 
 }
-} 
