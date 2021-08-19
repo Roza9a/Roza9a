@@ -1,27 +1,10 @@
 const { Client, Collection, MessageEmbed } = require(`discord.js`);
 const { 
   PREFIX, 
-} = require(`../config.json`);
-
-module.exports = {
-  name: `help`,
-  description: `Gives you a list of all help Commands`,
-  aliases: ["h","commands"],
-  cooldown: 3,
-  edesc: "Type help to get a short preview of all Commands, Type help <COMMANDNAME> to get extended information about this one command!",
-  execute(message,args,client) {
-     
-    let commands = message.client.commands.array();
- 
-    let helpEmbed = new MessageEmbed()
-      .setTitle("MBWF-v1 Help")
-      .setDescription(`**Version:** \`v2.8\` \n**PREFIX:** \`${+}\``)
-      .setFooter( client.user.username +`Type: ${+}help <Command>  for more information!`)
-      .setColor("#c219d8");
-
-      //define argstrue to negative
+require(`../config.json`);  = {
+//define argstrue to negative
     let ifargstruedothis = -1;
-.addfaeild(`
+
       switch(args[0]){
           case "filter":
            ifargstruedothis=0;
@@ -100,7 +83,7 @@ module.exports = {
                 true
               );
             });
-          if(!message.guild) {
+
             if(!args[0]) {message.react("<:Yeh:827947991922376776>");return message.author.send(helpEmbed);}
             return
             }
