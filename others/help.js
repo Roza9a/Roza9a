@@ -7,7 +7,7 @@ const {
 const db = require('quick.db');
 
 module.exports = {
-  name: `~musiccommands`,
+  name: `help`,
   description: "(h)Gives you a list of all help Commands",
   aliases: ["h","commands"],
   cooldown: 3,
@@ -23,10 +23,10 @@ module.exports = {
     //define the help embed
     let helpEmbed = new MessageEmbed()
       .setTitle(`List of all commands`)
-      .setDescription("__**```LIST OF ALL CHILL MUSIC COMMANDS```**__")
-       .setImage('https://cdn.discordapp.com/attachments/877688129463664690/877891416209121280/92d9607b947fbd8c44a0df1f3c582d71.gif')
+      .setDescription("__**```List of all commands```**__")
+       .setImage('')
        .setFooter(message.author.username, message.author.displayAvatarURL)
-       .setDescription(`**[  SUPPORT  ](https://discord.gg/VCGtFWeuQD)**   -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=874259088878485555&permissions=8&scope=bot)`)
+       .setDescription(`**[  SUPPORT  ](https://discord.gg/Cc2xg2AEjd)**   -  [   INVITE   ](https://discord.com/oauth2/authorize?client_id=792047204361175091&permissions=1076131920&scope=bot)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setColor('RANDOM');
     //define argstrue to negative
@@ -146,4 +146,5 @@ message.channel.send(helpEmbed)
           );
        }
 
+}
 }
