@@ -26,7 +26,7 @@ module.exports = {
       .setDescription("__**```CHILL BOT```**__")
        .setImage('')
        .setFooter(message.author.username, message.author.displayAvatarURL)
-       .setDescription(`**[  SUPPORT  ](https://discord.gg/kurd1)**   -  [   INVITE   ](ODc0MjU5MDg4ODc4NDg1NTU1.YREXOQ.neQwh-m5jZZX1awC_Uw-OrEJxBg)`)
+       .setDescription(`**[  SUPPORT  ](https://discord.gg/kurd1)**   -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=874259088878485555&permissions=8&scope=bot)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setColor('RANDOM');
     let ifargstruedothis = -1;
