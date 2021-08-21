@@ -18,7 +18,7 @@ module.exports = {
     let seconds = Math.floor(client.uptime / 1000) % 60;
     //react with approve emoji
     message.react("769665713124016128");
-    return message.channel.send(new MessageEmbed().setColor("#c219d8").setTitle(`**__CHILL BOT UPTIME__**\n\n\`${days}d\` \`${hours}h\` \`${minutes}m\` \`${seconds}s\n\``));
+    return message.channel.send(new MessageEmbed().setColor("#8AD0DA").setTitle(`**__CHILL BOT UPTIME__**\n\n\`${days}d\` \`${hours}h\` \`${minutes}m\` \`${seconds}s\n\``));
 
 
   }
