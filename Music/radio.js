@@ -188,7 +188,7 @@
   const song = {
     title: args2[0],
     url: args2[1],
-    thumbnail: "https://cdn.discordapp.com/attachments/748095614017077318/769672148524335114/unknown.png",
+    thumbnail: "https://cdn.discordapp.com/attachments/807677211133083698/878674678812651560/source.gif",
     duration: 10000,
   };
   let a, b;
