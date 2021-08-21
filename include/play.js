@@ -144,7 +144,7 @@ module.exports = {
         .addField("Time :clock4: ", `\`${song.duration} Minutes :cdEmote: \``, true)
         .addField("Voice Channel 📣 :",channel.name)
         .addField("Text Channel 🗯️ :",message.channel.name)
-        .addField("Voulome :loading: :",100)
+        .addField("Voulome 💫 :",100)
         .setURL(song.url)
         .setColor("#8AD0DA")
         .setThumbnail(thumb)
