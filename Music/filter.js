@@ -117,7 +117,7 @@ async execute(message, args, client) {
       //play the collected song song, message, client, filters
       message.channel.send(new MessageEmbed()
       .setColor("#c219d8")
-      .setAuthor("Applying: " + args[0], "https://cdn.discordapp.com/emojis/769935094285860894.gif")).then(msg =>{
+      .setAuthor("Applying: " + args[0], "https://cdn.discordapp.com/attachments/807677211133083698/878672100464947210/filter-cancel.gif")).then(msg =>{
         msg.delete({timeout: 2000});
       })
       play(song, message, client, choice);
