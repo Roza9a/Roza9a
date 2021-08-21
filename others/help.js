@@ -29,6 +29,79 @@ module.exports = {
        .setDescription(`**[  SUPPORT  ](https://discord.gg/kurd1)**   -  [   INVITE   ](ODc0MjU5MDg4ODc4NDg1NTU1.YREXOQ.neQwh-m5jZZX1awC_Uw-OrEJxBg)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setColor('RANDOM');
+    let ifargstruedothis = -1;
+
+      switch(args[0]){
+          case "":
+           ifargstruedothis=0;
+          break;
+          case "":
+            ifargstruedothis=1;
+          break;
+          case "":
+            ifargstruedothis=2
+          break;
+          case "":
+            ifargstruedothis=3
+          break;
+          case "":
+            ifargstruedothis=4
+          break;
+          case "":
+            ifargstruedothis=5
+          break;
+          case "":
+            ifargstruedothis=6
+          break;
+          case "":
+            ifargstruedothis=7
+          break;
+          case "":
+            ifargstruedothis=8
+          break;
+          case "":
+            ifargstruedothis=9
+          break; 
+          case "":
+            ifargstruedothis=10
+          break;
+          case "":
+            ifargstruedothis=11
+          break;
+          case "":
+            ifargstruedothis=12
+          break;
+          case "":
+            ifargstruedothis=13
+          break;
+          case "":
+            ifargstruedothis=14
+          break;
+          case "":
+            ifargstruedothis=15
+          break;
+          case "":
+            ifargstruedothis=16
+          break;
+          case "":
+            ifargstruedothis=17
+          break;
+          case "":
+            ifargstruedothis=18
+          break;
+          case "":
+            ifargstruedothis=19
+          break;
+          case "":
+            ifargstruedothis=20
+          break;
+          case "":
+            ifargstruedothis=21
+          break;
+          case "":
+            ifargstruedothis=22
+          break;
+          default:
             commands.forEach((cmd) => {
               helpEmbed.addField(
                 `**${prefix}${cmd.name}**`,
