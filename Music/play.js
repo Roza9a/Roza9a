@@ -68,29 +68,29 @@ async execute(message, args, client) {
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** ✔ Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** ✔ Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
         //send join message
         message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-          .setDescription(`**👍 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
+          .setDescription(`* 🟢 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
           .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** ✔ Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** ✔ Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
         queueConstruct.connection.voice.setSelfDeaf(true);
