@@ -3,7 +3,7 @@ const {
   PREFIX,
   approveemoji,
   denyemoji
-} = require(``);
+} = require(`../config.json`);
 const db = require('quick.db');
 
 module.exports = {
