@@ -26,7 +26,7 @@ module.exports = {
       queue.channel.leave();
       message.client.queue.delete(message.guild.id);
       const endembed = new MessageEmbed().setColor("#8AD0DA")
-        .setAuthor(`Music song is ended.`, "https://cdn.discordapp.com/attachments/807677211133083698/878699764709994556/R_2.gif")
+        .setAuthor(`Music ended add a new song and stay alone < title | youtube url>.`, "https://cdn.discordapp.com/attachments/702815000795807795/878774797843177532/ef8979914e1f0105fdf441005bc50d87.gif")
       return queue.textChannel.send(endembed).catch(console.error);
     }
 
