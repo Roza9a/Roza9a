@@ -141,10 +141,10 @@ module.exports = {
            const channel = message.member.voice.channel
       const newsong = new MessageEmbed()
         .setTitle(":gem: "+song.title)
-        .addField("Time :clock4: ", `\`${song.duration} Minutes  <:cdEmote:878778862446575616> \``, true)
+        .addField("Time :clock4: ", `\`${song.duration} Minutes  🎼 \``, true)
         .addField("Voice Channel 📣 :",channel.name)
         .addField("Text Channel 🗯️ :",message.channel.name)
-        .addField("Voulome 💫 :",100)
+        .addField("Voulome 💫 :",69)
         .setURL(song.url)
         .setColor("#8AD0DA")
         .setThumbnail(thumb)
