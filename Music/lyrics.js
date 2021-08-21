@@ -32,7 +32,7 @@ async execute(message) {
     //define the temporary Embed
     let temEmbed = new MessageEmbed()
     .setAuthor("Searching...", "https://cdn.discordapp.com/attachments/807677211133083698/878673102882611220/dribbble.gif").setFooter("Lyrics")
-    .setColor("#f300e5")
+    .setColor("#8AD0DA")
     //send it and safe it in a variable
     let result = await message.channel.send(temEmbed)
     //try to find lyrics
@@ -50,7 +50,7 @@ async execute(message) {
     let lyricsEmbed = new MessageEmbed()
       .setTitle("<:lyrics:769938447279456296> Lyrics")
       .setDescription(lyrics)
-      .setColor("#f300e5")
+      .setColor("#8AD0DA")
     //if to long make slice it
     if (lyricsEmbed.description.length >= 2048)
       //slice the embed description and redefine it
