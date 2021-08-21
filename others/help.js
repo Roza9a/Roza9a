@@ -7,7 +7,7 @@ const {
 const db = require('quick.db');
 
 module.exports = {
-  name: ``,
+  name: `music commands`,
   description: "(h)Gives you a list of all help Commands",
   aliases: [],
   cooldown: 3,
@@ -28,7 +28,7 @@ module.exports = {
        .setFooter(message.author.username, message.author.displayAvatarURL)
        .setDescription(`**[  SUPPORT  ](https://discord.gg/kurd1)**   -  [   INVITE   ](https://discord.com/api/oauth2/authorize?client_id=874259088878485555&permissions=8&scope=bot)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
-      .setColor('RANDOM');
+      .setColor('#8AD0DA');
     let ifargstruedothis = -1;
 
       switch(args[0]){
@@ -140,7 +140,7 @@ message.channel.send(helpEmbed)
         );
         if(!message.guild) return message.author.send(helpEmbed);
           message.author.send(helpEmbed)
-          message.channel.send( new MessageEmbed().setColor("#c219d8")
+          message.channel.send( new MessageEmbed().setColor("#8AD0DA")
         .setDescription(`**👍 ${message.author} Check your \`direct messages\` for a list of Commands!**`)
           );
        }
