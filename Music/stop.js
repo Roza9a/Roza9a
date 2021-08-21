@@ -37,7 +37,7 @@ async execute(message,args,client) {
   await channel.leave();
   //send the approve message
   message.channel.send(new MessageEmbed()
-  .setColor("#c219d8")
+  .setColor("#8AD0DA")
   .setAuthor(`${message.author.username} stopped the music!`, "https://cdn.discordapp.com/attachments/807677211133083698/878676756159168532/music-stop-icon-39445_1.png"))
   .catch(console.error);
   }
