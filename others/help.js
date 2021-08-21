@@ -23,86 +23,12 @@ module.exports = {
     //define the help embed
     let helpEmbed = new MessageEmbed()
       .setTitle(`List of all commands`)
-      .setDescription("__**```List of all commands```**__")
+      .setDescription("__**```CHILL BOT```**__")
        .setImage('')
        .setFooter(message.author.username, message.author.displayAvatarURL)
-       .setDescription(`**[  SUPPORT  ](https://discord.gg/Cc2xg2AEjd)**   -  [   INVITE   ](https://discord.com/oauth2/authorize?client_id=792047204361175091&permissions=1076131920&scope=bot)`)
+       .setDescription(`**[  SUPPORT  ](https://discord.gg/kurd1)**   -  [   INVITE   ](ODc0MjU5MDg4ODc4NDg1NTU1.YREXOQ.neQwh-m5jZZX1awC_Uw-OrEJxBg)`)
       .setThumbnail(message.author.avatarURL({dynamic: "true"}))
       .setColor('RANDOM');
-    //define argstrue to negative
-    let ifargstruedothis = -1;
-
-      switch(args[0]){
-          case "filter":
-           ifargstruedothis=0;
-          break;
-          case "loop":
-            ifargstruedothis=1;
-          break;
-          case "lyrics":
-            ifargstruedothis=2
-          break;
-          case "nowplaying":
-            ifargstruedothis=3
-          break;
-          case "pause":
-            ifargstruedothis=4
-          break;
-          case "play":
-            ifargstruedothis=5
-          break;
-          case "playlist":
-            ifargstruedothis=6
-          break;
-          case "queue":
-            ifargstruedothis=7
-          break;
-          case "radio":
-            ifargstruedothis=8
-          break;
-          case "remove":
-            ifargstruedothis=9
-          break; 
-          case "resume":
-            ifargstruedothis=10
-          break;
-          case "search":
-            ifargstruedothis=11
-          break;
-          case "shuffle":
-            ifargstruedothis=12
-          break;
-          case "skip":
-            ifargstruedothis=13
-          break;
-          case "skipto":
-            ifargstruedothis=14
-          break;
-          case "stop":
-            ifargstruedothis=15
-          break;
-          case "volume":
-            ifargstruedothis=16
-          break;
-          case "botlist":
-            ifargstruedothis=17
-          break;
-          case "help":
-            ifargstruedothis=18
-          break;
-          case "invite":
-            ifargstruedothis=19
-          break;
-          case "ping":
-            ifargstruedothis=20
-          break;
-          case "prefix":
-            ifargstruedothis=21
-          break;
-          case "uptime":
-            ifargstruedothis=22
-          break;
-          default:
             commands.forEach((cmd) => {
               helpEmbed.addField(
                 `**${prefix}${cmd.name}**`,
