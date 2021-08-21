@@ -25,8 +25,8 @@ module.exports = {
     if (!song) {
       queue.channel.leave();
       message.client.queue.delete(message.guild.id);
-      const endembed = new MessageEmbed().setColor("#146DF6")
-        .setAuthor(`Music Queue ended.`, "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif")
+      const endembed = new MessageEmbed().setColor("#8AD0DA")
+        .setAuthor(`Music song is ended.`, "https://cdn.discordapp.com/attachments/807677211133083698/878699764709994556/R_2.gif")
       return queue.textChannel.send(endembed).catch(console.error);
     }
 
@@ -133,7 +133,7 @@ module.exports = {
     }
     
   let thumb;
-    if (song.thumbnail === undefined) thumb = "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif";
+    if (song.thumbnail === undefined) thumb = "https://media.discordapp.net/attachments/807677211133083698/878696480284762142/be00bde483fb57dd98481f3af1036920.gif?width=631&height=473";
     else thumb = song.thumbnail.url;
 
   try {
@@ -141,12 +141,12 @@ module.exports = {
            const channel = message.member.voice.channel
       const newsong = new MessageEmbed()
         .setTitle(":gem: "+song.title)
-        .addField("Time ⏱ :", `\`${song.duration} Minutes 🖇\``, true)
+        .addField("Time :clock4: ", `\`${song.duration} Minutes :cdEmote: \``, true)
         .addField("Voice Channel 📣 :",channel.name)
         .addField("Text Channel 🗯️ :",message.channel.name)
-        .addField("Voulome ❄️ :",100)
+        .addField("Voulome :loading: :",100)
         .setURL(song.url)
-        .setColor("#146DF6")
+        .setColor("#8AD0DA")
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
@@ -287,7 +287,7 @@ module.exports = {
         let ms = (Number(minutes)*60+Number(seconds));   
         //get thumbnail
         let thumb;
-        if (song.thumbnail === undefined) thumb = "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif";
+        if (song.thumbnail === undefined) thumb = "https://media.discordapp.net/attachments/807677211133083698/878696480284762142/be00bde483fb57dd98481f3af1036920.gif?width=631&height=473";
         else thumb = song.thumbnail.url;
         //define current time
         const seek = (queue.connection.dispatcher.streamTime - queue.connection.dispatcher.pausedTime) / 1000;
@@ -298,7 +298,7 @@ module.exports = {
           .setAuthor('<a:waya:813455060864073788> Now playing')
           .setDescription(`[${song.title}](${song.url})`)
           .setThumbnail(song.thumbnail.url)
-          .setColor("#146DF6")
+          .setColor("#8AD0DA")
           .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       //if its a stream
       if(ms >= 10000) {
@@ -321,7 +321,7 @@ module.exports = {
           let queueEmbed = new MessageEmbed()
             .setTitle("Music Queue")
             .setDescription(description)
-            .setColor("#146DF6")
+            .setColor("#8AD0DA")
              ;
       
           const splitDescription = splitMessage(description, {
@@ -345,8 +345,8 @@ module.exports = {
           if (!canModifyQueue(member)) return;
           let lyrics = null;
           let temEmbed = new MessageEmbed()
-          .setAuthor("Searching...", "https://cdn.discordapp.com/attachments/778600026280558617/781024479623118878/ezgif.com-gif-maker_1.gif").setFooter("Lyrics")
-          .setColor("#146DF6")
+          .setAuthor("Searching...", "https://media.discordapp.net/attachments/807677211133083698/878696480284762142/be00bde483fb57dd98481f3af1036920.gif?width=631&height=473").setFooter("Lyrics")
+          .setColor("#8AD0DA")
           let result = await message.channel.send(temEmbed)
           try {
             lyrics = await lyricsFinder(queue.songs[0].title,"");
@@ -358,7 +358,7 @@ module.exports = {
           let lyricsEmbed = new MessageEmbed()
             .setTitle("🗒️ Lyrics")
             .setDescription(lyrics)
-            .setColor("#146DF6")
+            .setColor("#8AD0DA")
       
           if (lyricsEmbed.description.length >= 2048)
       
@@ -373,7 +373,7 @@ module.exports = {
     collector.on("end", () => {
       playingMessage.reactions.removeAll().catch(console.error);
       if (PRUNING && playingMessage && !playingMessage.deleted) {
-        playingMessage.delete({ timeout: 3000 }).catch(console.error);
+        playingMessage.delete({ timeout: 10000 }).catch(console.error);
       }
     });
   }
