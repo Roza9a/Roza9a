@@ -67,30 +67,30 @@ async execute(message, args, client) {
       if (serverQueue) {
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
-            .setDescription(`**<:youtube:769675858431705109> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+          message.channel.send(new MessageEmbed().setColor("#8AD0DA")
+            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
-            .setDescription(`**<:youtube:769675858431705109> Searching 🔍 \`${args.join(" ")}\`**`))
+          message.channel.send(new MessageEmbed().setColor("#8AD0DA")
+            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
         //send join message
-        message.channel.send(new MessageEmbed().setColor("#c219d8")
+        message.channel.send(new MessageEmbed().setColor("#8AD0DA")
           .setDescription(`**👍 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
           .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
         //if its an url
         if (urlValid) { //send searching link
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
-            .setDescription(`**<:youtube:769675858431705109> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+          message.channel.send(new MessageEmbed().setColor("#8AD0DA")
+            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not
         }
         else { //send searching TITLE
-          message.channel.send(new MessageEmbed().setColor("#c219d8")
-            .setDescription(`**<:youtube:769675858431705109> Searching 🔍 \`${args.join(" ")}\`**`))
+          message.channel.send(new MessageEmbed().setColor("#8AD0DA")
+            .setDescription(`** <:youtube~3:878701721151475772> Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
         queueConstruct.connection.voice.setSelfDeaf(true);
@@ -159,8 +159,8 @@ async execute(message, args, client) {
       serverQueue.songs.push(song);
       //the new song embed
       const newsong = new MessageEmbed()
-        .setTitle("<:Playing:769665713124016128> " + song.title)
-        .setColor("#c219d8")
+        .setTitle(" ▶ " + song.title)
+        .setColor("#8AD0DA")
         .setThumbnail(thumb)
         .setURL(song.url)
         .setDescription(`\`\`\`Has been added to the Queue.\`\`\``)
