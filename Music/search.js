@@ -40,7 +40,7 @@ async execute(message,args,client) {
     const search = args.join(" ");
     //define a temporary Loading Embed
     let temEmbed = new MessageEmbed()
-    .setAuthor("Searching...", "https://cdn.discordapp.com/emojis/757632044632375386.gif?v=1")
+    .setAuthor("Searching...", "https://cdn.discordapp.com/attachments/807677211133083698/878675492562153472/R_1.gif")
     .setColor("#f300e5")
     //define the Result Embed
     let resultsEmbed = new MessageEmbed()
