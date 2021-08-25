@@ -29,7 +29,8 @@ module.exports = {
     }
     //define queueembed
     let queueEmbed = new MessageEmbed()
-      .setTitle("Music Queue")
+      .setTitle("__MUSIC QUEUE__")
+      .setAuthor(" <a:801119395182411816:880224063623168000> QUEUE SONGS IS REDY!")
       .setDescription(description)
       .setColor("#8AD0DA");
     //split the description
