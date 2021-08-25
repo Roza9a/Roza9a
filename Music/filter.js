@@ -92,8 +92,10 @@ async execute(message, args, client) {
         varforfilter = 404;
         message.channel.send(new MessageEmbed()
         .setColor("#8AD0DA")
-        .setTitle("Not a valid Filter, use one of those:")
+        .setTitle("**Not a valid Filter, use one of those:**")
+        .setURL(`https://bit.ly/vickybot`)                
         .setDescription(`
+        \`\`\`CHILL BOT IS HERE <a:594600646888521762:880146579519058030>\`\`\`
         \`bassboost\`
         \`8D\`
         \`vaporwave\`
