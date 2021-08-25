@@ -68,12 +68,12 @@ async execute(message, args, client) {
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** ✔ Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** ✔ Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
@@ -85,12 +85,12 @@ async execute(message, args, client) {
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** ✔ Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** ✔ Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
         queueConstruct.connection.voice.setSelfDeaf(true);
@@ -159,7 +159,7 @@ async execute(message, args, client) {
       serverQueue.songs.push(song);
       //the new song embed
       const newsong = new MessageEmbed()
-        .setTitle(" ▶ " + song.title)
+        .setTitle(" <a:781647394411642931:880221713739186267> " + song.title)
         .setColor("#8AD0DA")
         .setThumbnail(thumb)
         .setURL(song.url)
