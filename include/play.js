@@ -141,7 +141,7 @@ module.exports = {
            const channel = message.member.voice.channel
       const newsong = new MessageEmbed()
         .setTitle(" <a:4AEFFDF69F874AD3B0459AC4CEEEACA8:865336856920064031> "+song.title)
-        .addField("TIME <a:868149302550229012:880214009259900948> ", "<a:86CC6063224F4DF08A7CE492A14715E4:803964506299695125>"`\`${song.duration} Minutes\``, true)
+        .addField("TIME <a:868149302550229012:880214009259900948> ",`\`  ${song.duration} Minutes  \``, true)
         .addField("Voice Channel 📣 ",channel.name)
         .addField("Text Channel <:SIA_Hashtag:803965732584947742> ",message.channel.name)
         .addField("Voulome <:868160707638755348:880217046854561853> ",queue.volume)
@@ -150,17 +150,17 @@ module.exports = {
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
-      await playingMessage.react("⏭");
-      await playingMessage.react("⏯");
-      await playingMessage.react("🔉");
-      await playingMessage.react("🔊");
-      await playingMessage.react("🔇");
-      await playingMessage.react("🔁");
-      await playingMessage.react("🔀");
-      await playingMessage.react("⏹");
-      await playingMessage.react("🎵");
-      await playingMessage.react("🎶");
-      await playingMessage.react("📑");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
+      await playingMessage.react("");
     } catch (error) {
       console.error(error);
     }
