@@ -68,29 +68,29 @@ async execute(message, args, client) {
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** <a:866595180899336212:882325869568327770> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
         //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** <a:866595180899336212:882325869568327770> Searching 🔍 \`${args.join(" ")}\`**`))
         }
       } else {
         //If nothing is playing join the channel
         queueConstruct.connection = await channel.join();
         //send join message
         message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-          .setDescription(`** 🟢 Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
+          .setDescription(`** <:joines:866356465299488809> Joined \`${channel.name}\` 📄 bound \`#${message.channel.name}\`**`)
           .setFooter(`By: ${message.author.username}#${message.author.discriminator}`))
         //if its an url
         if (urlValid) { //send searching link
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
+            .setDescription(`** <a:866595180899336212:882325869568327770> Searching 🔍 [\`LINK\`](${args.join(" ")})**`))
           //if not
         }
         else { //send searching TITLE
           message.channel.send(new MessageEmbed().setColor("#8AD0DA")
-            .setDescription(`** <a:851379321373589524:880214233864880168> Searching 🔍 \`${args.join(" ")}\`**`))
+            .setDescription(`** <a:866595180899336212:882325869568327770> Searching 🔍 \`${args.join(" ")}\`**`))
         }
         //Set selfdeaf and serverdeaf true
         queueConstruct.connection.voice.setSelfDeaf(true);
