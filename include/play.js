@@ -151,8 +151,8 @@ module.exports = {
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
-      await playingMessage.react("<a:862001423024521246:882343160896970782:866116058329776198:>");
-      await playingMessage.react("<:R4:882330167765266502>");
+      await playingMessage.react("");
+      await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
@@ -176,22 +176,22 @@ module.exports = {
       const member = message.guild.member(user);
 
       switch (reaction.emoji.name) {
-        case "<a:862001423024521246:882343160896970782:866116058329776198:>":
+        case "⏩":
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.connection.dispatcher.end();
-          queue.textChannel.send(`${user} <a:862001423024521246:882343160896970782:866116058329776198:> skipped the song`).catch(console.error);
+          queue.textChannel.send(`${user} ⏩ skipped the song`).catch(console.error);
           collector.stop();
           break;
 
-        case "<:R4:882330167765266502>":
+        case "⏸":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
-            queue.textChannel.send(`${user} <:R4:882330167765266502> paused the music.`).catch(console.error);
+            queue.textChannel.send(`${user} ⏸ paused the music.`).catch(console.error);
           } else {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.resume();
