@@ -151,10 +151,10 @@ module.exports = {
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
-      await playingMessage.react("");
+      await playingMessage.react("<a:emoji_21:866595403608883220>");
+      await playingMessage.react("<a:emoji_22:866595430887849984>");
+      await playingMessage.react("<a:emoji_18:866595312599826432>");
+      await playingMessage.react("<a:emoji_20:866595371170005002>");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
