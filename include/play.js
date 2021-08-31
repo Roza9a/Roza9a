@@ -140,17 +140,17 @@ module.exports = {
       let embed = new MessageEmbed()
            const channel = message.member.voice.channel
       const newsong = new MessageEmbed()
-        .setTitle(" <a:4AEFFDF69F874AD3B0459AC4CEEEACA8:865336856920064031> "+song.title)
-        .addField("TIME <a:868149302550229012:880214009259900948> ",`\`  ${song.duration} Minutes  \``, true)
+        .setTitle(" <a:880146579519058030:882325635408723998> "+song.title)
+        .addField("TIME <a:6a31ea879c78517985ae5ad326eacc67:882325904716595301> ",`\`  ${song.duration} Minutes  \``, true)
         .addField("Voice Channel 📣 ",channel.name)
-        .addField("Text Channel <:SIA_Hashtag:803965732584947742> ",message.channel.name)
-        .addField("Voulome <:868160707638755348:880217046854561853> ",queue.volume)
+        .addField("Text Channel <:803965732584947742:882325709438189648> ",message.channel.name)
+        .addField("Voulome <:880217046854561853:882325589170745425> ",queue.volume)
         .setURL(song.url)
         .setColor("#8AD0DA")
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
-      await playingMessage.react("");
+      await playingMessage.react("<:R4:882330167765266502>");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
