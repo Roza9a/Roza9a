@@ -140,7 +140,8 @@ module.exports = {
       let embed = new MessageEmbed()
            const channel = message.member.voice.channel
       const newsong = new MessageEmbed()
-        .setTitle(" <a:880146579519058030:882325635408723998> "+song.title)
+        .addField("<a:880146579519058030:882325635408723998> Chill playing music")
+        .setTitle(" <a:866116058329776198:882343139602497598>"+song.title)
         .addField("TIME <a:6a31ea879c78517985ae5ad326eacc67:882325904716595301> ",`\`  ${song.duration} Minutes  \``, true)
         .addField("Voice Channel 📣 ",channel.name)
         .addField("Text Channel <:803965732584947742:882325709438189648> ",message.channel.name)
@@ -150,8 +151,8 @@ module.exports = {
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
+      await playingMessage.react("<a:862001423024521246:882343160896970782:866116058329776198:>");
       await playingMessage.react("<:R4:882330167765266502>");
-      await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
@@ -175,22 +176,22 @@ module.exports = {
       const member = message.guild.member(user);
 
       switch (reaction.emoji.name) {
-        case "⏭":
+        case "<a:862001423024521246:882343160896970782:866116058329776198:>":
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.connection.dispatcher.end();
-          queue.textChannel.send(`${user} ⏩ skipped the song`).catch(console.error);
+          queue.textChannel.send(`${user} <a:862001423024521246:882343160896970782:866116058329776198:> skipped the song`).catch(console.error);
           collector.stop();
           break;
 
-        case "⏯":
+        case "<:R4:882330167765266502>":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.playing) {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.pause(true);
-            queue.textChannel.send(`${user} ⏸ paused the music.`).catch(console.error);
+            queue.textChannel.send(`${user} <:R4:882330167765266502> paused the music.`).catch(console.error);
           } else {
             queue.playing = !queue.playing;
             queue.connection.dispatcher.resume();
