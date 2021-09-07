@@ -153,10 +153,10 @@ module.exports = {
       var playingMessage = await queue.textChannel.send(newsong);
       await playingMessage.react("🔶");
       await playingMessage.react("🔷");
-      await playingMessage.react("");
       await playingMessage.react("🔻");
       await playingMessage.react("🔺");
       await playingMessage.react("➰");
+      await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
