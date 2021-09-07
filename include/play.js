@@ -151,13 +151,13 @@ module.exports = {
         .setThumbnail(thumb)
         .setFooter(`Requested by: ${message.author.username}#${message.author.discriminator}`, message.member.user.displayAvatarURL({ dynamic: true }))
       var playingMessage = await queue.textChannel.send(newsong);
-      await playingMessage.react("⏩");
-      await playingMessage.react("⏸");
-      await playingMessage.react("🔇");
-      await playingMessage.react("🔉");
-      await playingMessage.react("🔊");
-      await playingMessage.react("🔁");
-      await playingMessage.react("⏹");
+      await playingMessage.react("🔶");
+      await playingMessage.react("🔷");
+      await playingMessage.react("");
+      await playingMessage.react("🔻");
+      await playingMessage.react("🔺");
+      await playingMessage.react("➰");
+      await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
       await playingMessage.react("");
@@ -176,7 +176,7 @@ module.exports = {
       const member = message.guild.member(user);
 
       switch (reaction.emoji.name) {
-        case "⏩":
+        case "🔶":
           queue.playing = true;
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
@@ -213,7 +213,7 @@ module.exports = {
           }
           break;
 
-        case "🔉":
+        case "🔻":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.volume - 10 <= 0) queue.volume = 0;
@@ -224,7 +224,7 @@ module.exports = {
             .catch(console.error);
           break;
 
-        case "🔊":
+        case "🔺":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           if (queue.volume + 10 >= 100) queue.volume = 100;
@@ -235,7 +235,7 @@ module.exports = {
             .catch(console.error);
           break;
 
-        case "🔁":
+        case "➰":
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
           queue.loop = !queue.loop;
@@ -340,7 +340,7 @@ module.exports = {
           });
           break;
 
-          case "📑":
+          case "🔷":
         
           reaction.users.remove(user).catch(console.error);
           if (!canModifyQueue(member)) return;
